@@ -40,3 +40,19 @@ module.exports.counter =function(arr){
 //     counter:counter,
 //     subs:subs
 // };
+
+// Event Module
+var  dev = require('events');
+var myEmitter =   new dev.EventEmitter();
+myEmitter.on("someEvent",function(msg){
+    console.log("Have a nice day!");
+    console.log(msg);
+});
+myEmitter.emit("someEvent","The event was Emitted");
+
+//New Keyword
+function person(name){
+    this.names=name;
+}
+var R= new person("Obalesh");
+console.log(R.names);
